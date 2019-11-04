@@ -1,0 +1,26 @@
+{
+  "name": "cuf",
+  "version": "0.1.2",
+  "description": "☘ 提供node.js相关基础接口，帮助快速开发。",
+  "scripts": {
+    "start": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yelloxing/cuf.git"
+  },
+  "keywords": [
+    "cuf",
+    "node.js",
+    "es"
+  ],
+  "author": "心叶",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yelloxing/cuf/issues"
+  },
+  "homepage": "https://github.com/yelloxing/cuf#readme",
+  "dependencies": {
+    "@yelloxing/core.js": "^0.3.1"
+  }
+}
