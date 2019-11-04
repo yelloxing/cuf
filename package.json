@@ -2,6 +2,7 @@
   "name": "cuf",
   "version": "0.1.2",
   "description": "☘ 提供node.js相关基础接口，帮助快速开发。",
+  "main": "index.js",
   "scripts": {
     "start": "npm install"
   },
@@ -14,6 +15,9 @@
     "node.js",
     "es"
   ],
+  "bin": {
+    "cuf": "bin/run"
+  },
   "author": "心叶",
   "license": "MIT",
   "bugs": {
