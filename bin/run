@@ -3,3 +3,17 @@
 'use strict';
 
 process.title = 'cuf';
+
+const cuf = require('../index');
+
+// 命令行传递的参数
+const parsed = cuf.option({
+
+  // 缩写需要在这里映射好对应的全写
+  "-h": "--help",
+  "-f": "--force",
+  "-c": "--config"
+
+}, process.argv);
+
+console.log(parsed);
