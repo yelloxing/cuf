@@ -4,27 +4,45 @@ module.exports = {
   "config": {
     help: {
       short: 'h',
-      info: 'Display this help text.'
+      info: '[1]Display this help text.',
+      demo: 'cuf --help|-h <term>'
     },
     force: {
       short: 'f',
-      info: 'Enforce the current operation.'
+      info: '[x]Enforce the current operation.',
+      demo: 'cuf --force|-f'
     },
     config: {
-      info: 'Specify a configuration file.'
+      info: '[0]Specify a configuration file.',
+      demo: 'cuf --config ./cuf.config.json'
     },
     delete: {
       short: 'd',
-      info: 'delete file or folder.'
+      info: '[2]delete file or folder.',
+      demo: 'cuf --delete|-d ./file'
     },
     copy: {
       short: 'c',
-      info: 'copy file or folder.'
+      info: '[3]copy file or folder.',
+      demo: 'cuf --copy|-c ./sourceFile ./targetFile'
     },
     move: {
       short: 'm',
-      info: 'move file or folder.'
+      info: '[4]move file or folder.',
+      demo: 'cuf --move|-m ./sourceFile ./targetFile'
     }
-  }
+  },
+
+  // 帮助信息
+  "help": `
+  Usage: cuf <command>
+  
+  where <command> is one of:
+    --help, -h, --config, --force, -f, --delete, -d, --move, -m, --copy, -c
+  
+  cuf --help|-h <term>       search for help on <term>
+  cuf --help|-h              involved overview
+    `
 
 };
+

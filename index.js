@@ -1,5 +1,7 @@
 const option = require('./scripts/option');
 const file = require('./scripts/file');
+const print = require('./scripts/print');
+const path = require('./scripts/path');
 
 module.exports = {
 
@@ -9,6 +11,13 @@ module.exports = {
   // 文件操作相关
   moveSync: file.moveSync,
   deleteSync: file.deleteSync,
-  copySync: file.copySync
+  copySync: file.copySync,
+
+  // 日志打印
+  log: print.log,
+  print: print.print,
+
+  // 路径
+  fullPath: path.fullPath
 
 };

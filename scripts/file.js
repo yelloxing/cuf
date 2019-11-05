@@ -7,7 +7,8 @@
  * 
  */
 function moveSync(source, target) {
-
+  console.log('move');
+  console.log(source, target);
 };
 
 /**
@@ -19,7 +20,8 @@ function moveSync(source, target) {
  * 
  */
 function copySync(source, target) {
-
+  console.log('copy');
+  console.log(source, target);
 };
 
 /**
@@ -30,7 +32,8 @@ function copySync(source, target) {
  * 
  */
 function deleteSync(target) {
-
+  console.log('delete');
+  console.log(target);
 };
 
 // 导出
