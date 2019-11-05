@@ -1,7 +1,13 @@
 /**
+ * 
  * 命令行参数解析
+ * 
+ * @param {JSON} config 命令参数缩小到全写的映射
+ * @param {Array} argv 需要判断类型的值
+ * 
+ * @returns {JSON} 返回整理后的参数
+ * 
  */
-
 module.exports = function (config, argv) {
 
   let resultConfig = {}, flag = null;
