@@ -1,6 +1,6 @@
 {
   "name": "cuf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "☘ 提供node.js相关基础接口，帮助快速开发。",
   "main": "index.js",
   "scripts": {

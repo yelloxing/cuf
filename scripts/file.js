@@ -108,7 +108,7 @@ function deleteSync(target, needLog) {
 
   // 打印操作日志
   if (needLog) {
-    linelog('【delete】' + source + " → " + target);
+    linelog('【delete】' + target);
   }
 };
 
