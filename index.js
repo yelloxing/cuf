@@ -16,6 +16,7 @@ module.exports = {
   // 日志打印
   log: print.log,
   print: print.print,
+  linelog: print.linelog,
 
   // 路径
   fullPath: path.fullPath

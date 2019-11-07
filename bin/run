@@ -64,17 +64,28 @@ else {
 
   // 删除
   if (__.isArray(parsed.delete) && parsed.delete.length > 0) {
-    cuf.deleteSync(cuf.fullPath(parsed.delete[0]));
+    let targetPath = cuf.fullPath(parsed.delete[0]);
+    cuf.deleteSync(targetPath, true);
+    cuf.linelog('【delete】' + targetPath + '\n');
+    process.exit(0);
   }
 
   // 复制
   else if (__.isArray(parsed.copy) && parsed.copy.length > 1) {
-    cuf.copySync(cuf.fullPath(parsed.copy[0]), cuf.fullPath(parsed.copy[1]));
+    let sourcePath = cuf.fullPath(parsed.copy[0]);
+    let targetPath = cuf.fullPath(parsed.copy[1]);
+    cuf.copySync(sourcePath, targetPath, true);
+    cuf.linelog('【copy】' + sourcePath + ' → ' + targetPath + '\n');
+    process.exit(0);
   }
 
   // 剪切
   else if (__.isArray(parsed.move) && parsed.move.length > 1) {
-    cuf.moveSync(cuf.fullPath(parsed.move[0]), cuf.fullPath(parsed.move[1]));
+    let sourcePath = cuf.fullPath(parsed.move[0]);
+    let targetPath = cuf.fullPath(parsed.move[1]);
+    cuf.moveSync(sourcePath, targetPath, true);
+    cuf.linelog('【move】' + sourcePath + ' → ' + targetPath + '\n');
+    process.exit(0);
   }
 
   // 否则

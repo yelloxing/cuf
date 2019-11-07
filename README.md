@@ -35,19 +35,19 @@ const parsed = cuf.option(shortHands, process.argv);
 - 移动文件或文件夹
 
 ```js
-cuf.moveSync(source, target);
+cuf.moveSync(source, target[, needLog]);
 ```
 
 - 删除文件或文件夹
 
 ```js
-cuf.deleteSync(target);
+cuf.deleteSync(target[, needLog]);
 ```
 
 - 复制文件或文件夹
 
 ```js
-cuf.copySync(source, target);
+cuf.copySync(source, target[, needLog]);
 ```
 
 ### 日志打印
@@ -62,6 +62,12 @@ cuf.log(txt);
 
 ```js
 cuf.print(txt);
+```
+
+- 不换行打印(多行自动回滚)
+
+```js
+cuf.linelog(txt);
 ```
 
 ### 路径
