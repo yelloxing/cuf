@@ -4,7 +4,8 @@
   "description": "cuf配置文件启动用例",
   "scripts": {
     "test1": "node ../../bin/run --config ./cuf.config.js demo1",
-    "test2": "node ../../bin/run --config ./cuf.config.js demo2"
+    "test2": "node ../../bin/run --config ./cuf.config.js demo2",
+    "test": "node ../../bin/run --config ./cuf.config.js"
   },
   "keywords": [
     "cuf",
