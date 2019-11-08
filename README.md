@@ -64,6 +64,12 @@ cuf.log(txt);
 cuf.print(txt);
 ```
 
+- 打印错误提示
+
+```js
+cuf.error(txt);
+```
+
 - 不换行打印(多行自动回滚)
 
 ```js

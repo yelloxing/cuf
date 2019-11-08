@@ -115,4 +115,4 @@ function deleteSync(target, needLog) {
 // 导出
 exports.moveSync = moveSync;
 exports.copySync = copySync;
-exports.deleteSync = deleteSync; 
+exports.deleteSync = deleteSync;

@@ -1,10 +1,20 @@
 const cuf = require('../index');
+const fs = require('fs');
 
-module.exports = function (configUrl) {
+module.exports = function (configUrl, taskName) {
 
-  cuf.print("\n【config】"+configUrl);
-  cuf.log('\n==========================================');
-  cuf.log('此功能开发中，我们会在未来实现，敬请期待！');
-  cuf.log('==========================================\n');
+  // 如果配置文件存在，且是.js文件
+  if (/\.js$/.test(configUrl) && fs.existsSync(configUrl) && !fs.lstatSync(configUrl).isDirectory()) {
 
+    let configFile = require(configUrl);
+
+    // 获取package.json文件
+    let packageJSON = JSON.parse(fs.readFileSync(cuf.fullPath(configFile.pkg + '/package.json', configFile.path)));
+
+    // 执行任务
+    configFile.task[taskName](cuf, packageJSON);
+
+  } else {
+    cuf.error('No config file:' + configUrl);
+  }
 };

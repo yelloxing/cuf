@@ -26,11 +26,11 @@ const parsed = cuf.option(shortHands, process.argv);
 if (__.isArray(parsed.config)) {
 
   if (parsed.config.length < 1) {
-    cuf.log('Config file [eg. cuf.config.js] is required!');
+    cuf.error('Config file [eg. cuf.config.js] is required!');
   } else {
 
     // 启动配置文件运行
-    bootstrap(cuf.fullPath(parsed.config[0]));
+    bootstrap(cuf.fullPath(parsed.config[0]), parsed.config[1]);
   }
   return;
 }

@@ -20,6 +20,17 @@ exports.print = function (txt) {
   console.log(txt);
 };
 
+/**
+ * 
+ * 打印错误提示
+ * 
+ * @param {string} txt 需要打印的文字
+ * 
+ */
+exports.error = function (txt) {
+  console.log("\x1B[35m" + txt + "\x1B[39m");
+};
+
 const MOVE_LEFT = Buffer.from('1b5b3130303044', 'hex').toString();
 const MOVE_UP = Buffer.from('1b5b3141', 'hex').toString();
 const CLEAR_LINE = Buffer.from('1b5b304b', 'hex').toString();

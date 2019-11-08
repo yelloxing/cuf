@@ -1,0 +1,15 @@
+{
+  "name": "cuf-demo",
+  "version": "0.0.0",
+  "description": "cuf配置文件启动用例",
+  "scripts": {
+    "test1": "node ../../bin/run --config ./cuf.config.js demo1",
+    "test2": "node ../../bin/run --config ./cuf.config.js demo2"
+  },
+  "keywords": [
+    "cuf",
+    "demo"
+  ],
+  "author": "心叶",
+  "license": "MIT"
+}
