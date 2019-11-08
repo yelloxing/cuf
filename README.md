@@ -20,70 +20,10 @@
 const cuf = require('cuf');
 ```
 
-### 解析命令行参数
-
-- 解析命令行传递的参数，转换为更容易处理的结构： 
-
-```js
-// 其中shortHands是缩写到全拼的映射
-// 例子：{'-c':'--copy','-d':'--delete'}
-const parsed = cuf.option(shortHands, process.argv);
-```
-
-### 文件操作相关
-
-- 移动文件或文件夹
-
-```js
-cuf.moveSync(source, target[, needLog]);
-```
-
-- 删除文件或文件夹
-
-```js
-cuf.deleteSync(target[, needLog]);
-```
-
-- 复制文件或文件夹
-
-```js
-cuf.copySync(source, target[, needLog]);
-```
-
-### 日志打印
-
-- 打印一些重要提示信息
-
-```js
-cuf.log(txt);
-```
-
-- 打印最普通的提示
-
-```js
-cuf.print(txt);
-```
-
-- 打印错误提示
-
-```js
-cuf.error(txt);
-```
-
-- 不换行打印(多行自动回滚)
-
-```js
-cuf.linelog(txt);
-```
-
-### 路径
-
-- 获取文件或文件夹的全路径
-
-```js
-// contextPath表示路径上下文，可选，默认当前命令行路径
-cuf.fullPath(pathString[, contextPath]);
-```
+- [解析命令行参数](https://github.com/yelloxing/cuf/blob/master/docs/option.md)
+- [文件操作相关](https://github.com/yelloxing/cuf/blob/master/docs/file.md)
+- [日志打印](https://github.com/yelloxing/cuf/blob/master/docs/print.md)
+- [路径](https://github.com/yelloxing/cuf/blob/master/docs/path.md)
 
 ## License
 
