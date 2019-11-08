@@ -1,7 +1,7 @@
-const cuf = require('../index');
+const cuf = require('../../index');
 
 let index = 0;
-setInterval(function () {
+let interval = setInterval(function () {
   index += 1;
 
   let txt = '[1] - ' + Math.random();
@@ -16,9 +16,9 @@ setInterval(function () {
   cuf.linelog("\x1B[33m" + txt + "\x1B[39m");
 
   if (index === 50) {
+    clearInterval(interval);
     cuf.linelog('同行打印结束\n');
     cuf.log('exit');
-    process.exit(0);
   }
 
 }, 300);
