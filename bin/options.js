@@ -14,7 +14,7 @@ module.exports = {
     },
     config: {
       info: '[0]Specify a configuration file.',
-      demo: 'cuf --config ./cuf.config.json'
+      demo: 'cuf --config ./cuf.config.js'
     },
     delete: {
       short: 'd',
