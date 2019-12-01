@@ -111,6 +111,15 @@ else {
     cuf.linelog('【move】' + sourcePath + ' → ' + targetPath + '\n');
   }
 
+  // 服务器
+  else if (__.isArray(parsed.server)) {
+
+    cuf.server({
+      port: parsed.server[0]
+    });
+
+  }
+
   // 否则
   else {
 

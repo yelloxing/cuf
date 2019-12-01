@@ -2,6 +2,7 @@ const option = require('./scripts/option');
 const file = require('./scripts/file');
 const print = require('./scripts/print');
 const path = require('./scripts/path');
+const server = require('./scripts/server');
 
 module.exports = {
 
@@ -20,6 +21,9 @@ module.exports = {
   linelog: print.linelog,
 
   // 路径
-  fullPath: path.fullPath
+  fullPath: path.fullPath,
+
+  // 服务器
+  server
 
 };

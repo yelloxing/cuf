@@ -24,6 +24,7 @@ const cuf = require('cuf');
 - [文件操作相关](https://github.com/yelloxing/cuf/blob/master/docs/file.md)
 - [日志打印](https://github.com/yelloxing/cuf/blob/master/docs/print.md)
 - [路径](https://github.com/yelloxing/cuf/blob/master/docs/path.md)
+- [服务器](https://github.com/yelloxing/cuf/blob/master/docs/server.md)
 
 ## License
 

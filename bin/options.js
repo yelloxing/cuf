@@ -30,6 +30,11 @@ module.exports = {
       short: 'm',
       info: '[4]move file or folder.',
       demo: 'cuf --move|-m ./sourceFile ./targetFile'
+    },
+    server:{
+      short: 's',
+      info: '[5]render source server.',
+      demo: 'cuf --server|-s [port|8080]'
     }
   },
 
@@ -38,7 +43,7 @@ module.exports = {
   Usage: cuf <command>
   
   where <command> is one of:
-    --help, -h, --config, --force, -f, --delete, -d, --move, -m, --copy, -c
+    --help, -h, --config, --force, -f, --delete, -d, --move, -m, --copy, -c, --server, -s
   
   cuf --help|-h <term>       search for help on <term>
   cuf --help|-h              involved overview
