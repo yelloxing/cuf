@@ -9,6 +9,9 @@ const cuf = require('../index');
 const options = require('./options').config;
 const help = require('./options').help;
 const fs = require('fs');
+const path = require('path');
+
+const jsonfile = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')));
 
 // 用于处理 --config 配置文件
 const bootstrap = require('./bootstrap');
@@ -21,6 +24,12 @@ for (let key in options) {
 
 // 命令行传递的参数
 const parsed = cuf.option(shortHands, process.argv);
+
+// 打印版本
+if (__.isArray(parsed.version)) {
+  cuf.log("\nv" + jsonfile.version + "\n");
+  return;
+}
 
 // 如果添加了配置文件，直接根据配置文件运行
 if (__.isArray(parsed.config)) {
@@ -45,18 +54,18 @@ if (__.isArray(parsed.help)) {
     // 缩写转全拼
     if (help0.length == 1) {
       help0 = shortHands["-" + help0];
+    }
 
-      if (help0) {
-        help0 = help0.replace(/^--/, "");
+    if (help0) {
+      help0 = help0.replace(/^--/, "");
 
-        // 根据需要帮助的命令获取对应的信息
-        const help0Option = options[help0];
-        cuf.log(`
-  `+ help0Option.demo + `         ` + help0Option.info + `
+      // 根据需要帮助的命令获取对应的信息
+      const help0Option = options[help0];
+      cuf.log(`
+  ` + help0Option.demo + `         ` + help0Option.info + `
         `);
 
-        return;
-      }
+      return;
     }
 
   }
@@ -124,7 +133,11 @@ else {
   else {
 
     cuf.log(`
-  Invalid command!
+  ` + jsonfile.name + `@v` + jsonfile.version + `
+  ----------------------------------------
+  ` + jsonfile.repository.url + `
+
+  ` + help + `
     `);
   }
 }
