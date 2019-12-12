@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/yelloxing/cuf#readme",
   "dependencies": {
-    "@yelloxing/core.js": "^0.3.7",
-    "string-width": "^4.2.0"
+    "@yelloxing/core.js": "^0.3.7"
   }
 }

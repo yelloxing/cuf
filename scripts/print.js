@@ -32,7 +32,9 @@ exports.error = function (txt) {
 };
 
 // 计算字符串长度的方法
-const stringwidth = require('string-width');
+const stringwidth = function (str) {
+  return str.length;
+};
 
 // 预定义的常量
 const MOVE_LEFT = Buffer.from('1b5b3130303044', 'hex').toString();

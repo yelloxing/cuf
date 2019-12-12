@@ -14,13 +14,13 @@ module.exports = function (percentum, stream) {
         i = 0;
 
     // 补充已经有的进度
-    for (; i <= percentum && i <= 100; i += 1) {
+    for (; i <= percentum && i <= 100; i += 5) {
         txt += "█";
     }
 
     // 补充余下的空白
-    for (; i <= 100; i += 1) {
-        txt += "░░";
+    for (; i <= 100; i += 5) {
+        txt += "░";
     }
 
     linelog(percentum.toFixed(2) + "%[" + txt + "]" + stream);
