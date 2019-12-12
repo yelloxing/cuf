@@ -3,6 +3,7 @@ const file = require('./scripts/file');
 const print = require('./scripts/print');
 const path = require('./scripts/path');
 const server = require('./scripts/server');
+const process = require('./scripts/process');
 
 module.exports = {
 
@@ -19,6 +20,9 @@ module.exports = {
   print: print.print,
   error: print.error,
   linelog: print.linelog,
+
+  // 进度打印
+  process,
 
   // 路径
   fullPath: path.fullPath,

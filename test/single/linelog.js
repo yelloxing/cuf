@@ -10,6 +10,7 @@ let interval = setInterval(function () {
 
   if (index < 40) txt += '\n[2] - ' + Math.random();
   if (index < 30) txt += '\n[3] - ' + Math.random();
+  txt += "\n[more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more more]";
   if (index < 20) txt += '\n[4] - ' + Math.random();
   if (index > 40) txt += '\n[5] - ' + Math.random();
 
