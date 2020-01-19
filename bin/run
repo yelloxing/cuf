@@ -124,7 +124,8 @@ else {
   else if (__.isArray(parsed.server)) {
 
     cuf.server({
-      port: parsed.server[0]
+      port: parsed.server[0],
+      contentBase: cuf.fullPath(parsed.server[1] || "./", process.cwd())
     });
 
   }
