@@ -3,6 +3,7 @@ const fs = require('fs');
 const log = require('./print').log;
 const fullPath = require('./path').fullPath;
 const mineTypes = require('./assets/mime.types.js');
+const responseFileList = require('./assets/responseFileList');
 
 module.exports = function (config) {
 
@@ -29,10 +30,11 @@ module.exports = function (config) {
       type = mineTypes[dotName];
 
     // 如果需要读取的文件存在
-    if (fs.existsSync(filePath)) {
+    if (fs.existsSync(filePath) && !fs.lstatSync(filePath).isDirectory()) {
       content = fs.readFileSync(filePath);
     } else {
       status = 404;
+      content = responseFileList(filePath);
     }
 
     response.writeHead(status, {
